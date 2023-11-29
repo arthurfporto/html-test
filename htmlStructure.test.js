@@ -11,6 +11,18 @@ describe("Estrutura HTML", () => {
     document = dom.window.document;
   });
 
+  test("Deve conter a tag <!DOCTYPE html>", () => {
+    const doctype = document.doctype;
+    expect(doctype.name).toBe("html");
+    expect(doctype.publicId).toBe("");
+    expect(doctype.systemId).toBe("");
+  });
+
+  test("Deve conter as tags <html></html>", () => {
+    const htmlTag = document.querySelector("html");
+    expect(htmlTag).not.toBeNull();
+  });
+
   test("Deve conter um elemento <head>", () => {
     expect(document.querySelector("head")).not.toBeNull();
   });
