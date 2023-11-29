@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies and run tests
         run: |
           npm install
-          npx jest htmlStructure.test.js
+          npx jest htmlStructure2.test.js
 
       - name: Merge PR if tests pass
         if: ${{ github.event_name == 'pull_request' && success() }}
